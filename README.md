@@ -1,2 +1,2 @@
 # meliuz
-Clone do site Meliuz com melhores e novos recursos 
+Clone do site Méliuz com novos recursos 
