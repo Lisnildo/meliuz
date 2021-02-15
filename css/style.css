@@ -1,3 +1,13 @@
+/*-----------ACESSO RAPIDO-----------*/
+:root{
+    --Padrão:#ff3859;
+    --Padrão_Escuro: #cc0022;
+
+    --Fundo_header: #ebedf3;
+    --Fundo_main:#f2f0f7;
+}
+
+/*-----------LAYOUT (Toda a Pagina)-----------*/
 *{
     margin: 0;
     padding: 0;
@@ -5,27 +15,22 @@
     font-family: 'Nunito', sans-serif;
 }
 
+/*-----------CONTAINER¹ (Logo,Login e Cadastro>-----------*/
 header .container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 14px;
+    justify-content: space-between; 
+    margin-top: 16px;   
 }
 
-.clear{
-	clear: both;
-}
-
+/*-----------LOGO(Tamanho da Logo e Posição)-----------*/
 header .logo img{
     width: 113px;
-    margin-left: 50px;
+    margin-left: 58px;
 }
 
-header .cadastrar{
-    margin-right: 69px;
-}
-
+/*-----------CADASTRAR (Posição)-----------*/
 header .logcad a{
     text-decoration: none;
     color: black;
@@ -33,63 +38,158 @@ header .logcad a{
     padding: 15px 30px 15px 30px; 
     align-items: center;
     border-width: 2px;
-    border-radius: 24px;   
-   
+    border-radius: 24px;
+    border: none;   
 }
 
+/*-----------LOGIN E CADASTRAR (Efeito Hover)-----------*/
 header .logcad a:hover{
     background-color: #ebedf3;
     border-radius: 50px;
     transition: 200ms;
 }
 
-
-main .container-cb{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 10px;
-    }
-
-main .img-cashback{
-    margin-left: 35px;
+/*-----------CADASTRAR (Posição)-----------*/
+header .cadastrar{
+    margin-right: 69px;
 }
 
-main .text-cashback{
-    font-family:'Catamaran', sans-serif;
+/*-----------CONTAINER² (Imagem CashBack,Textos Cupons,Rodapé,Button Chrome, estrelas e robapé)-----------*/
+header .container-cb{
+    width: 100%;
+    display: flex;
+    align-items:initial;
+    margin-top: 12px;
+    margin-left: 58px;
+    margin-right: 69px;
 }
 
-main .text-cb{
-    margin-right: 260px;
+/*-----------IMAGEM CASHBACK (Tamanho)-----------*/
+header .img-cashback{
+    max-width: 100%;
 }
 
-main .rodape-cb{
+/*-----------TEXTOS E BUTTON DO CASHBACK (Texto principal, rodapés,button e estrelas)-----------*/
+header .text-cashback{
+    width: 100%;
+    display: inline-block;
+    align-items: table-header-group;  
+}
+
+/*-----------TEXTO PRINCIPAL DO CASHBACK (Fonte,Posição)-----------*/
+header .text-cb{
+    font-family: 'Catamaran', sans-serif;
+    margin-right: 100px;
+}
+
+/*-----------TEXTO RODAPE DO CASHBACK (Posição, Tamanho)-----------*/
+header .rodape-cb{
     margin-top: 10px;
+    margin-right: 100px;
     font-size: 22px;
-    margin-right: 150px;
 }
 
-main button{
-    color:;
-    margin-top: 28px;
+/*-----------BOTÃO ADICIONAR AO CHROME(Cores,Bordas, Efeitos e Posições)-----------*/
+header .chrome {
+    color: white;
+    background-color: var(--Padrão);
+    border: none;
     border-radius: 32px;
+    margin: 4px 2px;
+    padding: 16px 32px;
     font-size: 23px;
-    line-height: 32px;
-    padding: 14px 32px;
-    align-items: center;
-}
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
 
-main button i.fab{
+header .chrome:not(:last-child) {
+    border-bottom: none;
+  }
+  
+header .chrome:hover {
+    background-color: #cc0022;
+    transition-duration: 30ms;
+} 
+
+/*-----------ICONE DO CHROME(Tamanho e Posições)-----------*/
+header button i.fab{
     font-size: 18px;
     align-items:center;
     margin-right: 3px;
 }
 
-main .icon-estrela{
+/*-----------ICONE DA ESTRELA (Posições)-----------*/
+header .icon-estrela {
     margin-top: 5px;
 }
 
-
-main .fa-star{
+/*-----------ICONE DA ESTRELA (Cor)-----------*/
+header .fa-star{
     color: #ffc400;
+    margin: 2px;
+}
+
+
+/*=============================================*/
+
+
+main {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: #f2f0f7;
+    padding: 45px 0;
+}
+
+main .first-comment,
+main .second-comment,
+main .third-comment {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    height: 360px;
+}
+
+main .comments-wrapper {
+    width: 87%;
+    height: 460px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+main .comments-wrapper div {
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+
+main .profile-area {
+    display: flex;
+    align-items: center;
+}
+
+main .profile-area p {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #2b2f45;
+}
+
+main .avatar {
+    width: 48px;
+    height: 48px;
+    margin: 20px 10px 0 20px;
+}
+
+main .stars {
+    color: #ffc400;
+    margin: 20px 10px 20px 20px;
+}
+
+main .comment-content {
+    color: #2b2f45;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 20px;
+    margin: 0 20px;
+}
+    
