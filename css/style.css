@@ -1,95 +1,136 @@
 /*-----------ACESSO RAPIDO-----------*/
-:root{
-    --Padrão:#ff3859;
-    --Padrão_Escuro: #cc0022;
 
+:root {
+    --Padrão: #ff3859;
+    --Padrão_Escuro: #c42841;
     --Fundo_header: #ebedf3;
-    --Fundo_main:#f2f0f7;
+    --Fundo_main: #f2f0f7;
 }
 
+
 /*-----------LAYOUT (Toda a Pagina)-----------*/
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
+header {
+    padding-inline: 20%;
+}
+
+
 /*-----------CONTAINER¹ (Logo,Login e Cadastro>-----------*/
-header .container{
+
+header .container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; 
-    margin-top: 16px;   
+    justify-content: space-between;
+    margin-top: 16px;
 }
 
+
 /*-----------LOGO(Tamanho da Logo e Posição)-----------*/
-header .logo img{
+
+header .logo img {
     width: 113px;
     margin-left: 58px;
 }
 
+
+/*-----------LOGO(Efeito Scale)-----------*/
+
+.logo img {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+
 /*-----------CADASTRAR (Posição)-----------*/
-header .logcad a{
+
+header .logcad a {
     text-decoration: none;
     color: black;
     font-size: 16px;
-    padding: 15px 30px 15px 30px; 
+    padding: 15px 30px 15px 30px;
     align-items: center;
     border-width: 2px;
     border-radius: 24px;
-    border: none;   
+    border: none;
 }
 
+
 /*-----------LOGIN E CADASTRAR (Efeito Hover)-----------*/
-header .logcad a:hover{
+
+header .logcad a:hover {
     background-color: #ebedf3;
     border-radius: 50px;
     transition: 200ms;
 }
 
+
 /*-----------CADASTRAR (Posição)-----------*/
-header .cadastrar{
+
+header .cadastrar {
     margin-right: 69px;
 }
 
+
 /*-----------CONTAINER² (Imagem CashBack,Textos Cupons,Rodapé,Button Chrome, estrelas e robapé)-----------*/
-header .container-cb{
+
+header .container-cb {
     width: 100%;
     display: flex;
-    align-items:initial;
+    align-items: initial;
     margin-top: 12px;
     margin-left: 58px;
     margin-right: 69px;
 }
 
+
 /*-----------IMAGEM CASHBACK (Tamanho)-----------*/
-header .img-cashback{
+
+header .img-cashback {
     max-width: 100%;
 }
 
+
 /*-----------TEXTOS E BUTTON DO CASHBACK (Texto principal, rodapés,button e estrelas)-----------*/
-header .text-cashback{
+
+header .text-cashback {
     width: 100%;
     display: inline-block;
-    align-items: table-header-group;  
+    align-items: table-header-group;
 }
 
+
 /*-----------TEXTO PRINCIPAL DO CASHBACK (Fonte,Posição)-----------*/
-header .text-cb{
+
+header .text-cb {
     font-family: 'Catamaran', sans-serif;
     margin-right: 100px;
 }
 
+
 /*-----------TEXTO RODAPE DO CASHBACK (Posição, Tamanho)-----------*/
-header .rodape-cb{
+
+header .rodape-cb {
     margin-top: 10px;
     margin-right: 100px;
     font-size: 22px;
 }
 
+
 /*-----------BOTÃO ADICIONAR AO CHROME(Cores,Bordas, Efeitos e Posições)-----------*/
+
 header .chrome {
     color: white;
     background-color: var(--Padrão);
@@ -102,31 +143,53 @@ header .chrome {
     text-decoration: none;
     display: block;
     cursor: pointer;
-  }
+}
+
+
+/*-----------ICONE DO CHROME(Efeito giro)-----------*/
+
+.fa-chrome {
+    transition: all 1s;
+    cursor: logoer;
+}
+
+.fa-chrome:hover {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+
+
+/*-----------BUTTON CHROME(Efeito hover)-----------*/
 
 header .chrome:not(:last-child) {
     border-bottom: none;
-  }
-  
+}
+
 header .chrome:hover {
     background-color: #cc0022;
     transition-duration: 30ms;
-} 
+}
+
 
 /*-----------ICONE DO CHROME(Tamanho e Posições)-----------*/
-header button i.fab{
+
+header .fa-chrome {
     font-size: 18px;
-    align-items:center;
+    align-items: center;
     margin-right: 3px;
 }
 
+
 /*-----------ICONE DA ESTRELA (Posições)-----------*/
+
 header .icon-estrela {
     margin-top: 5px;
 }
 
+
 /*-----------ICONE DA ESTRELA (Cor)-----------*/
-header .fa-star{
+
+header .fa-star {
     color: #ffc400;
     margin: 2px;
 }
@@ -134,10 +197,11 @@ header .fa-star{
 
 /*=============================================*/
 
-
 main {
     width: 100vw;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     background: #f2f0f7;
     padding: 45px 0;
@@ -192,4 +256,305 @@ main .comment-content {
     margin-left: 20px;
     margin: 0 20px;
 }
-    
+
+main .text-button-wrapper {
+    width: 79%;
+    margin-top: -30px;
+    color: #2b2f45;
+    font-size: 25px;
+    font-weight: none;
+}
+
+main .text-button-wrapper span {
+    display: block;
+    text-align: center;
+}
+
+main .text-button-wrapper .button-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+main .chrome {
+    color: white;
+    background-color: var(--Padrão);
+    border: none;
+    border-radius: 32px;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    font-size: 23px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+main .chrome {
+    border-bottom: none;
+    transition: all 200ms linear;
+}
+
+main .chrome:hover {
+    background-color: #cc0022;
+    transition: all 200ms linear;
+}
+
+main .stores-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 64px 100px;
+    background: #7a7a7a21;
+    padding-inline: 20%;
+}
+
+main .stores-wrapper h2 {
+    color: #2b2f45;
+    font-family: Catamaran, Helvetica;
+    width: 155px;
+    position: relative;
+}
+
+main .stores-wrapper h2::after {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background: var(--Padrão);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+main .stores-wrapper .stores {
+    margin-top: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .stores-wrapper .stores nav {
+    width: 200px;
+}
+
+main .stores-wrapper .stores li {
+    list-style: none;
+    display: inline-block;
+}
+
+main .stores-wrapper .stores nav li {
+    color: #2b2f45;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 6px 0;
+}
+
+main .stores-wrapper .stores nav li span {
+    font-weight: bold;
+}
+
+main .stores-wrapper .stores nav li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main .categories-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    list-style: none;
+    background: #FFFFFF;
+    /*Add - Lis*/
+    padding-inline: 20%;
+}
+
+main .categories-wrapper h2 {
+    color: #2b2f45;
+    font-family: Catamaran, Helvetica;
+    width: 115px;
+    position: relative;
+}
+
+main .categories-wrapper h2::after {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background: var(--Padrão);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+main .categories-wrapper .categories {
+    width: 90%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .categories-wrapper .categories nav li {
+    font-size: 16px;
+    line-height: 35px;
+    color: #2b2f45;
+    opacity: 0.9;
+}
+
+main .categories-wrapper .categories nav i {
+    color: #2b2f2b;
+    opacity: 0.5;
+    margin-right: 10px;
+}
+
+
+/*=============================================*/
+
+footer {
+    background: #f2f0f7;
+    align-items: center;
+    align-content: space-between;
+}
+
+footer .container-footer {
+    display: flex;
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    flex-direction: row;
+    padding: 30px 100px;
+    background: white;
+    padding-inline: 20%;
+    background-color: ;
+}
+
+footer p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/*-----------SETAS DAS LINHAS (Cor,Posição)-----------*/
+
+footer .fas {
+    color: var(--Padrão);
+    padding: 4px;
+}
+
+
+/*-----------BUTTON CADASTRE SUA LOJA (Cor,Posição.Tamanho e efeitos)-----------*/
+
+footer .cadastre-ls {
+    color: #2b2f45;
+    background-color: rgb(246, 246, 246);
+    border: none;
+    border-radius: 32px;
+    margin: 4px 2px;
+    padding: 1px 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+footer .cadastre-ls:not(:last-child) {
+    border-bottom: ;
+}
+
+footer .cadastre-ls:hover {
+    background-color: #d3d3d3;
+    transition-duration: 30ms;
+}
+
+
+/*--------------CONTAINER-FOOTER 2------------------*/
+
+
+/*--------------TEXTO ADICIONAR O MELIUZ AO SEU NAVEGADOR-----------------*/
+
+footer .container-footer2 {
+    display: flex;
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    flex-direction: row;
+    padding: 64px 100px;
+    background: white;
+    padding-inline: 20%;
+}
+
+footer .section2 {
+    margin-left: 100px;
+}
+
+footer .playstore,
+.apple {
+    max-width: 24%;
+}
+
+
+/*--------------BUTTON ADICIONAR GRATIS------------------*/
+
+footer .button-ag {
+    color: white;
+    background-color: var(--Padrão);
+    border: none;
+    border-radius: 32px;
+    margin: 4px 2px;
+    padding: 4px 13px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    align-items: center;
+}
+
+footer .button-ag:not(:last-child) {
+    border-bottom: none;
+}
+
+footer .button-ag:hover {
+    background-color: #cc0022;
+    transition-duration: 31ms;
+}
+
+
+/*--------------CONTAINER-FOOTER 3------------------*/
+
+footer .container-footer3 {
+    display: flex;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    flex-direction: row;
+    padding: 20px 100px;
+    background: white;
+    padding-inline: 20%;
+}
+
+
+/*--------------LOGO FINAL------------------*/
+
+footer .section4 {}
+
+footer .logo-final {
+    width: 90px;
+}
+
+
+/*--------------DESENVOLVIDO NO BRASIL------------------*/
+
+footer .section5 {
+    margin-left: 200px;
+}
+
+footer .coracao {
+    color: #c42841;
+}
+
+
+/*--------------ENDEREÇO------------------*/
+
+footer .section6 {}
