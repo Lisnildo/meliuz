@@ -307,13 +307,12 @@ main .stores-wrapper {
     margin-top: 40px;
     padding: 64px 100px;
     background: #7a7a7a21;
-    padding-inline: 20%;
 }
 
 main .stores-wrapper h2 {
     color: #2b2f45;
-    font-family: Catamaran, Helvetica;
-    width: 155px;
+    font-family: "Catamaran", Helvetica;
+    width: 200px;
     position: relative;
 }
 
@@ -367,7 +366,6 @@ main .categories-wrapper {
     list-style: none;
     background: #FFFFFF;
     /*Add - Lis*/
-    padding-inline: 20%;
 }
 
 main .categories-wrapper h2 {
@@ -425,7 +423,6 @@ footer .container-footer {
     padding: 30px 100px;
     background: white;
     padding-inline: 20%;
-    background-color: ;
 }
 
 footer p:hover {
@@ -459,7 +456,7 @@ footer .cadastre-ls {
 }
 
 footer .cadastre-ls:not(:last-child) {
-    border-bottom: ;
+    border-bottom: none;
 }
 
 footer .cadastre-ls:hover {
@@ -537,8 +534,6 @@ footer .container-footer3 {
 
 /*--------------LOGO FINAL------------------*/
 
-footer .section4 {}
-
 footer .logo-final {
     width: 90px;
 }
@@ -556,5 +551,3 @@ footer .coracao {
 
 
 /*--------------ENDEREÇO------------------*/
-
-footer .section6 {}
