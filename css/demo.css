@@ -1,134 +1,118 @@
+/*-----------ACESSO RAPIDO-----------*/
+
 :root {
     --Padrão: #ff3859;
     --Padrão_Escuro: #cc0022;
     --Fundo_header: #ebedf3;
     --Fundo_main: #f2f0f7;
-    /* ACESSO RAPIDO - Cores e Tamanhos... */
 }
+
+
+/*-----------LAYOUT (Toda a Pagina)-----------*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Nunito Sans", "Helvetica Neue", Calibre, Helvetica, Arial, sans-serif;
-    /* SELETOR UNIVERSAL - Toda a Page*/
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 
-/*=-=-=-> TOPO <-=-=-=*/
+/*-----------CONTAINER¹ (Logo,Login e Cadastro>-----------*/
 
-header .container-lg {
+header .container {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    margin-top: 0;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-bottom: 16px;
-    padding-top: 16px;
     justify-content: space-between;
-    /* 1º CONTAINER DO HEADER - Posições*/
+    margin-top: 16px;
 }
 
-header .logo {
-    margin-left: 5px;
-    /* LOGO - Recua 25% da esquerda*/
-}
+
+/*-----------LOGO(Tamanho da Logo e Posição)-----------*/
 
 header .logo img {
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    width: 115px;
-    /* LOGO IMAGEM - Tamanho, Posição e espaçamento das bordas*/
+    width: 113px;
+    margin-left: 58px;
 }
 
-header .logcad {
-    box-sizing: border-box;
-    display: block;
-    align-items: center;
-    /* LOGIN E CADASTRO - Tamanho, Posição e espaçamento das bordas*/
-}
 
-header .login {
+/*-----------CADASTRAR (Posição)-----------*/
+
+header .logcad a {
     text-decoration: none;
-    color: #68627a;
+    color: black;
     font-size: 16px;
     padding: 15px 30px 15px 30px;
     align-items: center;
     border-width: 2px;
     border-radius: 24px;
     border: none;
-    /* LOGIN - Tamanho, Posição e espaçamento das bordas*/
 }
 
-header .cadastrar {
-    text-decoration: none;
-    color: #68627a;
-    font-size: 16px;
-    padding: 15px 30px 15px 30px;
-    align-items: center;
-    border-width: 2px;
-    border-radius: 24px;
-    border: none;
-    /*CADASTRO - Tamanho, Posição e espaçamento das bordas*/
-}
+
+/*-----------LOGIN E CADASTRAR (Efeito Hover)-----------*/
 
 header .logcad a:hover {
     background-color: #ebedf3;
     border-radius: 50px;
     transition: 200ms;
-    /*LOGIN E CADASTRO - Efeito hover*/
 }
+
+
+/*-----------CADASTRAR (Posição)-----------*/
+
+header .cadastrar {
+    margin-right: 69px;
+}
+
+
+/*-----------CONTAINER² (Imagem CashBack,Textos Cupons,Rodapé,Button Chrome, estrelas e robapé)-----------*/
 
 header .container-cb {
+    width: 100%;
     display: flex;
     align-items: initial;
-    margin-top: 71px;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    text-size-adjust: 100%;
-    justify-content: space-between;
-    /* 2º CONTAINER DO HEADER - Logo do CashBack e Textos*/
+    margin-top: 12px;
+    margin-left: 58px;
+    margin-right: 69px;
 }
 
-header .img-cb {
-    display: block;
-    margin-left: 10px;
+
+/*-----------IMAGEM CASHBACK (Tamanho)-----------*/
+
+header .img-cashback {
     max-width: 100%;
-    width: 1100px;
-    padding-top: 45px;
-    /* LOGO DINHEIRO DE VOLTA ATIVADO - Posições */
 }
+
+
+/*-----------TEXTOS E BUTTON DO CASHBACK (Texto principal, rodapés,button e estrelas)-----------*/
 
 header .text-cashback {
     width: 100%;
-    margin-left: 45px;
-    /* TEXTO - Cupons de desconto e cashback em centenas de lojas online */
+    display: inline-block;
+    align-items: table-header-group;
 }
 
+
+/*-----------TEXTO PRINCIPAL DO CASHBACK (Fonte,Posição)-----------*/
+
 header .text-cb {
-    display: block;
-    align-items: initial;
-    font-size: 46px;
     font-family: 'Catamaran', sans-serif;
-    margin-right: 30px;
-    line-height: 56px;
-    color: #312b45;
-    width: auto;
-    /* TEXTO - Cupons de desconto e cashback em centenas de lojas online */
+    margin-right: 100px;
 }
+
+
+/*-----------TEXTO RODAPE DO CASHBACK (Posição, Tamanho)-----------*/
 
 header .rodape-cb {
     margin-top: 10px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin-right: 100px;
     font-size: 22px;
-    font-family: 'Nunitu Sans', sans-serif;
-    width: auto;
-    /* TEXTO - O Méliuz te ajuda a encontrar as lojas e, com apenas um clique, você ativa o cashback na sua compra. */
 }
+
+
+/*-----------BOTÃO ADICIONAR AO CHROME(Cores,Bordas, Efeitos e Posições)-----------*/
 
 header .chrome {
     color: white;
@@ -136,47 +120,49 @@ header .chrome {
     border: none;
     border-radius: 32px;
     margin: 4px 2px;
-    margin-bottom: 20;
     padding: 16px 32px;
     font-size: 23px;
     text-align: center;
     text-decoration: none;
     display: block;
     cursor: pointer;
-    /* BUTTON ADICIONAR AO CHROME */
 }
 
 header .chrome:not(:last-child) {
     border-bottom: none;
-    /* BUTTON ADICIONAR AO CHROME  - borda none*/
 }
 
 header .chrome:hover {
     background-color: #cc0022;
     transition-duration: 30ms;
-    /* BUTTON ADICIONAR AO CHROME - Effect de transition-color */
 }
+
+
+/*-----------ICONE DO CHROME(Tamanho e Posições)-----------*/
 
 header button i.fab {
     font-size: 18px;
     align-items: center;
     margin-right: 3px;
-    /* ICONE DO CHROME NO BUTTON ADICIONAR AO CHROME */
 }
 
+
+/*-----------ICONE DA ESTRELA (Posições)-----------*/
+
 header .icon-estrela {
-    margin-top: 20px;
-    /* ICONE ESTRELA - Distanciamento */
+    margin-top: 5px;
 }
+
+
+/*-----------ICONE DA ESTRELA (Cor)-----------*/
 
 header .fa-star {
     color: #ffc400;
     margin: 2px;
-    /* ICONE ESTRELA - Margem e Color */
 }
 
 
-/*----------------MEIO(INICIO)----------------*/
+/*=============================================*/
 
 main {
     width: 100vw;
@@ -433,59 +419,21 @@ main .questions-wrapper .description-question {
     margin-bottom: 30px;
 }
 
-
-/*----------------MEIO(FIM)----------------*/
-
-
-/*----------------FUNDO(INICIO)----------------*/
-
 footer {
-    display: flex;
-    margin-top: 71px;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    /* 2º CONTAINER DO HEADER - Logo do CashBack e Textos*/
+    background: #f2f0f7;
+    align-items: center;
+    align-content: space-between;
 }
 
 footer .container-footer {
     display: flex;
     width: 100%;
-}
-
-footer .linha-sn {
-    margin-left: auto;
-    width: 100%;
-    align-items: center;
-}
-
-footer .linha-cb {
-    margin-left: auto;
-    width: 100%;
-    align-items: center;
-}
-
-footer .linha-tj {
-    margin-left: auto;
-    width: 100%;
-    align-items: center;
-}
-
-footer .sobre,
-.cb,
-.tj {
-    align-items: center;
-    margin-bottom: 8px;
-    font-size: 23px;
-    font-family: Catamaran, "Helvetica Neue", Calibre, Helvetica, Arial, sans-serif;
-}
-
-footer p {
-    margin-bottom: 10px;
-    margin-left: 3px;
-    align-items: center;
-    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    flex-direction: row;
+    padding: 30px 100px;
+    background: white;
+    padding-inline: 20%;
 }
 
 footer p:hover {
@@ -493,18 +441,23 @@ footer p:hover {
     cursor: pointer;
 }
 
-footer .fa-angle-right {
+
+/*-----------SETAS DAS LINHAS (Cor,Posição)-----------*/
+
+footer .fas {
     color: var(--Padrão);
-    font-size: 20px;
-    align-items: center;
+    padding: 4px;
 }
+
+
+/*-----------BUTTON CADASTRE SUA LOJA (Cor,Posição.Tamanho e efeitos)-----------*/
 
 footer .cadastre-ls {
     color: #2b2f45;
     background-color: rgb(246, 246, 246);
+    border: none;
     border-radius: 32px;
     margin: 4px 2px;
-    margin-top: 6px;
     padding: 1px 10px;
     font-size: 16px;
     text-align: center;
@@ -518,15 +471,16 @@ footer .cadastre-ls:not(:last-child) {
 }
 
 footer .cadastre-ls:hover {
-    transition-duration: 300ms;
-    border: 2px solid var(--Padrão);
+    background-color: #d3d3d3;
+    transition-duration: 30ms;
 }
 
 
-/*--------------CONTAINER-FOOTER 2----------
+/*--------------CONTAINER-FOOTER 2------------------*/
 
 
-/*--------------TEXTO ADICIONAR O MELIUZ AO SEU NAVEGADOR----
+/*--------------TEXTO ADICIONAR O MELIUZ AO SEU NAVEGADOR-----------------*/
+
 footer .container-footer2 {
     display: flex;
     width: 100%;
@@ -535,6 +489,7 @@ footer .container-footer2 {
     flex-direction: row;
     padding: 64px 100px;
     background: white;
+    padding-inline: 20%;
 }
 
 footer .section2 {
@@ -547,7 +502,7 @@ footer .playstore,
 }
 
 
-/*--------------BUTTON ADICIONAR GRATIS------------------
+/*--------------BUTTON ADICIONAR GRATIS------------------*/
 
 footer .button-ag {
     color: white;
@@ -575,7 +530,7 @@ footer .button-ag:hover {
 }
 
 
-/*--------------CONTAINER-FOOTER 3------------------
+/*--------------CONTAINER-FOOTER 3------------------*/
 
 footer .container-footer3 {
     display: flex;
@@ -584,17 +539,18 @@ footer .container-footer3 {
     flex-direction: row;
     padding: 20px 100px;
     background: white;
+    padding-inline: 20%;
 }
 
 
-/*--------------LOGO FINAL------------------
+/*--------------LOGO FINAL------------------*/
 
 footer .logo-final {
     width: 90px;
 }
 
 
-/*--------------DESENVOLVIDO NO BRASIL------------------
+/*--------------DESENVOLVIDO NO BRASIL------------------*/
 
 footer .section5 {
     margin-left: 200px;
@@ -606,6 +562,3 @@ footer .coracao {
 
 
 /*--------------ENDEREÇO------------------*/
-
-
-/*----------------FUNDO(FIM)----------------*/
