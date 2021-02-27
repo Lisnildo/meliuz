@@ -182,11 +182,12 @@ main .third-comment {
 }
 
 main .comments-wrapper {
-    width: 87%;
+    width: 50%;
     height: 460px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
+    background-color: #cc0022;
 }
 
 main .comments-wrapper div {

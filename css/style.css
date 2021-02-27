@@ -198,7 +198,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f2f0f7;
     padding: 45px 0;
 }
 
@@ -210,8 +209,8 @@ main .third-comment {
 }
 
 main .second-comment {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 main .comments-wrapper {
@@ -220,7 +219,7 @@ main .comments-wrapper {
     margin-top: 30px;
     margin-left: 20%;
     margin-right: 20%;
-    padding: 10px;
+    text-align: justify;
     text-size-adjust: 100%;
     justify-content: space-between;
 }
@@ -313,14 +312,14 @@ main .chrome:hover {
 }
 
 
-/*------------------TRABALHANDO------------------*/
+/*------------------Principais Lojas------------------*/
 
-main .stores-wrapper {
-    background: #E9E5F0;
+main .stores-bg {
+    background-color: #E9E5F0;
 }
 
 main .stores-wrapper {
-    display: flex;
+    display: block;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 71px;
@@ -331,6 +330,7 @@ main .stores-wrapper {
 main .stores-wrapper h2 {
     color: #2b2f45;
     font-family: Catamaran, Helvetica;
+    width: auto;
     position: relative;
 }
 
@@ -338,20 +338,20 @@ main .stores-wrapper h2::after {
     content: "";
     width: 70px;
     height: 2px;
-    background: var(--Padrão);
+    background: #FF3859;
     position: absolute;
     bottom: -10px;
     left: 0;
 }
 
-main .stores-wrapper .stores {
+main .stores {
     margin-top: 40px;
     display: flex;
+    list-style: none;
 }
 
-main .stores-wrapper .stores li {
-    list-style: none;
-    display: inline-block;
+main .stores nav {
+    width: 100%;
 }
 
 main .stores-wrapper .stores nav li {
@@ -370,13 +370,18 @@ main .stores-wrapper .stores nav li:hover {
     cursor: pointer;
 }
 
-main .cat {
+main .categories-bg {
+    background-color: #FFFFFF;
+}
+
+main .categories-wrapper {
     display: flex;
+    flex-direction: column;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 71px;
-    padding-bottom: 16px;
-    padding-top: 16px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    list-style: none;
 }
 
 main .categories-wrapper h2 {
@@ -386,16 +391,14 @@ main .categories-wrapper h2 {
 
 main .categories {
     margin-top: 40px;
-}
-
-main .categories {
-    margin-top: 40px;
     display: flex;
 }
 
 main .categories-wrapper .categories nav li {
     font-size: 16px;
-    line-height: 35px;
+    text-align: left;
+    line-height: 40px;
+    margin: 0 0 0 60px;
     color: #2b2f45;
     opacity: 0.9;
     cursor: pointer;
@@ -407,6 +410,16 @@ main .categories-wrapper .categories nav i {
     cursor: pointer;
 }
 
+main i {
+    margin-right: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+main .questions-bg {
+    background-color: #E9E5F0;
+}
+
 main .questions-wrapper {
     display: flex;
     margin-left: 20%;
@@ -416,7 +429,6 @@ main .questions-wrapper {
     padding-top: 16px;
     flex-direction: column;
     list-style: none;
-    background: #7a7a7a21;
     color: #2b2f45;
 }
 
@@ -431,7 +443,7 @@ main .questions-wrapper h2::after {
     content: "";
     width: 70px;
     height: 2px;
-    background: var(--Padrão);
+    background: #C42841;
     position: absolute;
     bottom: -10px;
     left: 0;
