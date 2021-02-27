@@ -1,9 +1,21 @@
 :root {
-    --Padrão: #ff3859;
-    --Padrão_Escuro: #cc0022;
-    --Fundo_header: #ebedf3;
-    --Fundo_main: #f2f0f7;
-    /* ACESSO RAPIDO - Cores e Tamanhos... */
+    /* CORES DE FUNDO */
+    --F.Branco: #FFFFFF;
+    --F.Rosa-Claro: #EBE9F0;
+    --F.Rosa-Escuro: #E9E5F0;
+    --F.Méliuz: #FF3859;
+    --F.Chrome: #C42841;
+    --F.Estrela: #FFC400;
+    --F.icon-Categorias: #68627A;
+    /* FONTES, CORES E TAMANHOS */
+    --Login: Nunito Sans, Regular, 16px, #68627A;
+    --Cupons de desconto: Catamaran, Bold, 46px, #312B45;
+    --O Méliuz te ajuda: Nunito Sans, Regular, 23px, #312B45;
+    --Adiocionar ao Chrome: Nunito Sans, Regular, 13px, #FFFFFF;
+    --10 Milhões: Nunito Sans, Regular, 13px, #312B45;
+    --Janiel Cardoso: Nunito Sans, Regular, 16px, #2B2F45;
+    --Depoimento: Nunito Sans, Regular, 16px, #2B2F45;
+    --O que você ta esperando: Nunito Sans, Regular, 23px, #2B2F45;
 }
 
 * {
@@ -43,6 +55,9 @@ header .logo img {
 }
 
 header .logcad {
+    font-family: 'Nunito Sans';
+    font-size: 16px;
+    color: #68627A;
     box-sizing: border-box;
     display: block;
     align-items: center;
@@ -132,7 +147,7 @@ header .rodape-cb {
 
 header .chrome {
     color: white;
-    background-color: var(--Padrão);
+    background-color: #FF3859;
     border: none;
     border-radius: 32px;
     margin: 4px 2px;
@@ -152,7 +167,7 @@ header .chrome:not(:last-child) {
 }
 
 header .chrome:hover {
-    background-color: #cc0022;
+    background-color: #C42841;
     transition-duration: 30ms;
     /* BUTTON ADICIONAR AO CHROME - Effect de transition-color */
 }
@@ -180,7 +195,6 @@ header .fa-star {
 
 main {
     width: 100vw;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -195,12 +209,20 @@ main .third-comment {
     height: 360px;
 }
 
+main .second-comment {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 main .comments-wrapper {
-    width: 87%;
-    height: 460px;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10px;
+    text-size-adjust: 100%;
+    justify-content: space-between;
 }
 
 main .comments-wrapper div {
@@ -239,16 +261,25 @@ main .comment-content {
 }
 
 main .text-button-wrapper {
-    width: 79%;
-    margin-top: -30px;
     color: #2b2f45;
     font-size: 25px;
-    font-weight: none;
+    display: block;
+    margin-top: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 16px;
+    padding-top: 16px;
 }
 
-main .text-button-wrapper span {
-    display: block;
+main .esperando {
     text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+main .chrome-but {
+    padding-left: 35%;
+    padding-top: 15px;
 }
 
 main .text-button-wrapper .button-area {
@@ -259,7 +290,7 @@ main .text-button-wrapper .button-area {
 
 main .chrome {
     color: white;
-    background-color: var(--Padrão);
+    background-color: #FF3859;
     border: none;
     border-radius: 32px;
     margin: 4px 2px;
@@ -277,23 +308,29 @@ main .chrome {
 }
 
 main .chrome:hover {
-    background-color: #cc0022;
+    background-color: #C42841;
     transition: all 200ms linear;
 }
 
+
+/*------------------TRABALHANDO------------------*/
+
 main .stores-wrapper {
-    width: 100%;
+    background: #E9E5F0;
+}
+
+main .stores-wrapper {
     display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-    padding: 64px 100px;
-    background: #7a7a7a21;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 71px;
+    padding-bottom: 16px;
+    padding-top: 16px;
 }
 
 main .stores-wrapper h2 {
     color: #2b2f45;
     font-family: Catamaran, Helvetica;
-    width: 155px;
     position: relative;
 }
 
@@ -309,13 +346,7 @@ main .stores-wrapper h2::after {
 
 main .stores-wrapper .stores {
     margin-top: 40px;
-    width: 90%;
     display: flex;
-    justify-content: space-between;
-}
-
-main .stores-wrapper .stores nav {
-    width: 200px;
 }
 
 main .stores-wrapper .stores li {
@@ -339,37 +370,27 @@ main .stores-wrapper .stores nav li:hover {
     cursor: pointer;
 }
 
-main .categories-wrapper {
-    width: 100%;
+main .cat {
     display: flex;
-    flex-direction: column;
-    padding: 50px 100px;
-    list-style: none;
-    background: #FFFFFF;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 71px;
+    padding-bottom: 16px;
+    padding-top: 16px;
 }
 
 main .categories-wrapper h2 {
     color: #2b2f45;
     font-family: Catamaran, Helvetica;
-    width: 115px;
-    position: relative;
 }
 
-main .categories-wrapper h2::after {
-    content: "";
-    width: 70px;
-    height: 2px;
-    background: var(--Padrão);
-    position: absolute;
-    bottom: -10px;
-    left: 0;
+main .categories {
+    margin-top: 40px;
 }
 
-main .categories-wrapper .categories {
-    width: 90%;
+main .categories {
     margin-top: 40px;
     display: flex;
-    justify-content: space-between;
 }
 
 main .categories-wrapper .categories nav li {
@@ -383,15 +404,17 @@ main .categories-wrapper .categories nav li {
 main .categories-wrapper .categories nav i {
     color: #2b2f2b;
     opacity: 0.5;
-    margin-right: 10px;
     cursor: pointer;
 }
 
 main .questions-wrapper {
-    width: 100%;
     display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 71px;
+    padding-bottom: 16px;
+    padding-top: 16px;
     flex-direction: column;
-    padding: 70px 100px;
     list-style: none;
     background: #7a7a7a21;
     color: #2b2f45;
@@ -399,9 +422,9 @@ main .questions-wrapper {
 
 main .questions-wrapper h2 {
     font-family: Catamaran, Helvetica;
-    width: 220px;
+    width: auto;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 main .questions-wrapper h2::after {
@@ -439,19 +462,13 @@ main .questions-wrapper .description-question {
 
 /*----------------FUNDO(INICIO)----------------*/
 
-footer {
+footer .container-footer {
     display: flex;
     margin-top: 71px;
     margin-left: 20%;
     margin-right: 20%;
     padding-bottom: 16px;
     padding-top: 16px;
-    /* 2º CONTAINER DO HEADER - Logo do CashBack e Textos*/
-}
-
-footer .container-footer {
-    display: flex;
-    width: 100%;
 }
 
 footer .linha-sn {
@@ -519,39 +536,36 @@ footer .cadastre-ls:not(:last-child) {
 
 footer .cadastre-ls:hover {
     transition-duration: 300ms;
-    border: 2px solid var(--Padrão);
+    border: 2px solid #2B2F45;
 }
 
-
-/*--------------CONTAINER-FOOTER 2----------
-
-
-/*--------------TEXTO ADICIONAR O MELIUZ AO SEU NAVEGADOR----
 footer .container-footer2 {
     display: flex;
+    margin-top: 71px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    /* 2º CONTAINER DO HEADER - Logo do CashBack e Textos*/
+}
+
+footer .container-footer2 p {
+    text-decoration: none;
+    cursor: auto;
+    margin-bottom: 16px;
+}
+
+footer .section1,
+.section2,
+.section3 {
+    margin-left: auto;
     width: 100%;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    flex-direction: row;
-    padding: 64px 100px;
-    background: white;
+    align-items: center;
 }
-
-footer .section2 {
-    margin-left: 100px;
-}
-
-footer .playstore,
-.apple {
-    max-width: 24%;
-}
-
-
-/*--------------BUTTON ADICIONAR GRATIS------------------
 
 footer .button-ag {
     color: white;
-    background-color: var(--Padrão);
+    background-color: #FF3859;
     border: none;
     border-radius: 32px;
     margin: 4px 2px;
@@ -570,42 +584,60 @@ footer .button-ag:not(:last-child) {
 }
 
 footer .button-ag:hover {
-    background-color: #cc0022;
+    background-color: #C42841;
     transition-duration: 31ms;
 }
 
+footer .playstore,
+.apple {
+    width: 130px;
+    border-radius: 32px;
+    margin-right: 10px;
+}
 
-/*--------------CONTAINER-FOOTER 3------------------
+footer .section3 i {
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
 footer .container-footer3 {
     display: flex;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    flex-direction: row;
-    padding: 20px 100px;
-    background: white;
+    margin-top: 71px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    align-items: ;
 }
 
+footer .section4 {
+    width: 50%;
+    align-items: center;
+}
 
-/*--------------LOGO FINAL------------------
+footer .section5 {
+    width: 100%;
+    align-items: center;
+}
 
 footer .logo-final {
     width: 90px;
-}
-
-
-/*--------------DESENVOLVIDO NO BRASIL------------------
-
-footer .section5 {
-    margin-left: 200px;
 }
 
 footer .coracao {
     color: #c42841;
 }
 
+footer .section5 p {
+    text-decoration: none;
+    cursor: default;
+}
 
-/*--------------ENDEREÇO------------------*/
+footer .frasesinal {
+    color: #68627a;
+}
 
-
-/*----------------FUNDO(FIM)----------------*/
+footer .local {
+    color: #b3afc2;
+}
